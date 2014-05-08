@@ -14,7 +14,7 @@ Simply include the wrappy source file on your page. wrappy has no dependencies o
 ### Method on a Object as a Promise
 To make a method a Promise object, you need to call wrappy with the object and method name:
 ```javascript
-// Make myObj.myMethod a Promise proxy that returns a deferred object
+// Make myObj.myMethod a Promise proxy that replaces myMethod() with a proxy
 wrappy.wrapMethod(myObj, 'myMethod');
 ```
 When invoking your method, wrappy will append a `Promise` object as the last argument that can either `resolve` or `reject`:
@@ -34,7 +34,7 @@ var myObj = {
     }
 };
 
-// You can now invoke myObj.myMethod as a Promised method
+// You can now invoke myObj.myMethod as usual, but it's now a Promised method
 myObj.myMethod('David').then(function(result) {
     console.log(result); // My name is David
 });
