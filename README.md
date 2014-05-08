@@ -12,7 +12,12 @@ Simply include the wrappy source file on your page. wrappy has no dependencies o
 <script src="wrappy.js"></script>
 ```
 ### Method on a Object as a Promise
-After you have passed your method to wrappy, when invoking wrappy will append a `Promise` object as the last argument that can either `resolve` or `reject`.
+To make a method a Promise object, you need to call wrappy with the object and method name:
+```javascript
+// Make myObj.myMethod a Promise proxy that returns a deferred object
+wrappy.wrapMethod(myObj, 'myMethod');
+```
+When invoking your method, wrappy will append a `Promise` object as the last argument that can either `resolve` or `reject`:
 ```javascript
 // Your custom object
 var myObj = {
@@ -28,9 +33,6 @@ var myObj = {
         
     }
 };
-
-// Make myObj.myMethod a Promise proxy that returns a deferred object
-wrappy.wrapMethod(myObj, 'myMethod');
 
 // You can now invoke myObj.myMethod as a Promised method
 myObj.myMethod('David').then(function(result) {
