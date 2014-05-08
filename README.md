@@ -14,21 +14,25 @@ Simply include the wrappy source file on your page. wrappy has no dependencies o
 ### Make a method of an object a Promise
 After you have passed your method to wrappy, when invoking wrappy will append a `Promise` object as the last argument that can either `resolve` or `reject`.
 ```javascript
+// Your custom object
 var myObj = {
     myMethod: function(name, promise) {
     
-        // simulate an asynchronous operation that completes in 5sec.
-        // this could be an ajax call or something else
+        // Simulate an asynchronous operation that completes in 5sec.
+        // This could be an ajax call or something else
         setTimeout(function() {
             promise.resolve('My name is ' + name);
         }, 5000);
         
-        // returns immediately, non-blocking
+        // Returns immediately, non-blocking
         
     }
 };
 
+// Make myObj.myMethod a Promise proxy that returns a deferred object
 wrappy.wrapMethod(myObj, 'myMethod');
+
+// You can now invoke myObj.myMethod as a Promised method
 myObj.myMethod('David').then(function(result) {
     console.log(result); // My name is David
 });
