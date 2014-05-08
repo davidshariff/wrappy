@@ -11,7 +11,7 @@ Simply include the wrappy source file on your page. wrappy has no dependencies o
 ```html
 <script src="wrappy.js"></script>
 ```
-### Make a method of an object a Promise
+### Method on a Object as a Promise
 After you have passed your method to wrappy, when invoking wrappy will append a `Promise` object as the last argument that can either `resolve` or `reject`.
 ```javascript
 // Your custom object
