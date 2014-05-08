@@ -12,7 +12,7 @@ Simply include the wrappy source file on your page. wrappy has no dependencies o
 <script src="wrappy.js"></script>
 ```
 ### Method on a Object as a Promise
-To make a method a Promise object, you need to call wrappy, `myMethod()`, with the object and method name:
+To make a method a Promise object, you need to call `wrappy.myMethod()`, with the object and method name:
 ```javascript
 // Make myObj.myMethod a Promise proxy that replaces myMethod() with a proxy
 wrappy.wrapMethod(myObj, 'myMethod');
@@ -41,9 +41,9 @@ myObj.myMethod('David').then(function(result) {
 ```
 
 ### Function as a Promise
-To make a standalone function a Promise object, you need to call wrappy, `wrapFunction()`, with the function and assign the result from wrappy back to your original function:
+To make a standalone function a Promise object, you need to call `wrappy.wrapFunction()`, with the function and assign the result from wrappy back to your original function:
 ```javascript
-// Make myObj.myMethod a Promise proxy that replaces myMethod() with a proxy
+// Make myFunction a Promise proxy that replaces reassigns itself
 myFunction = wrappy.wrapFunction(myFunction);
 ```
 Then call your function as usual:
