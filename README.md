@@ -12,7 +12,7 @@ Simply include the wrappy source file on your page. wrappy has no dependencies o
 <script src="wrappy.js"></script>
 ```
 ### Method on a Object as a Promise
-To make a method a Promise object, you need to call `wrappy.myMethod()`, with the object and method name:
+To make a method a Promise object, you need to call `wrappy.wrapMethod()`, with the object and method name:
 ```javascript
 // Make myObj.myMethod a Promise proxy that replaces myMethod() with a proxy
 wrappy.wrapMethod(myObj, 'myMethod');
