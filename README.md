@@ -55,4 +55,4 @@ function myFunction(promise) {
 
 myFunction().then(function(result) {
     console.log(result); // 'Some reason why the async operation failed'
-}).
+});
