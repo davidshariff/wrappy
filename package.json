@@ -1,0 +1,34 @@
+{
+    "name": "wrappy.js",
+    "author": "David Shariff",
+    "version": "0.0.1",
+    "description": "A function / method Promise wrapper utility for JavaScript",
+    "main": "wrappy.js",
+    
+    "scripts": {
+        "test": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha tests/*.js"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/davidshariff/wrappy.git"
+    },
+
+    "keywords": [
+        "wrappy",
+        "promise",
+        "deferred"
+    ],
+
+    "devDependencies": {
+        "istanbul": "~0.1.45",
+        "mocha": "~1.13.0",
+        "chai": "*",
+        "es6-promise": "*"
+    },
+
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/davidshariff/wrappy/issues"
+    }
+}
