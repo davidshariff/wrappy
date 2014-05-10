@@ -2,7 +2,7 @@ var wrappy = (typeof require !== "undefined") ? require("../wrappy.js") : window
     expect = require('chai').expect;
 
 // shim node Promise
-Promise = (typeof Promise !== "undefined") ? Promise : require("es6-promise").Promise,
+Promise = (typeof Promise !== "undefined") ? Promise : require("es6-promise").Promise;
 
 //------------------------------------------------------------------------------
 // Actual tests
