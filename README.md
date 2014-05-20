@@ -1,23 +1,23 @@
 # Wrappy
 
-wrappy.js is a simple utility library that helps wraps your functions and object methods in Promises. For those developers that often deal with Promises and Deferreds in a fluent interface, manually making a function or method return a promise quickly becomes tiresome and produces code bloat.
+Wrappy.js is a simple utility library that helps wraps your functions and methods in Promises. For those developers who often deal with Promises and Deferreds in a fluent interface, manually making a function or method return a promise quickly becomes tiresome and produces code bloat.
 
-wrappy simplfies this by creating a Promise proxy around each method passed, allowing you to focus on building your features.
+Wrappy simplfies this by creating a Promise proxy around each method of your methods, allowing you to focus on building your features.
 
 ## Getting Started
 
 ### Including it on your page
-Simply include the wrappy source file on your page. wrappy has no dependencies on other libraries or frameworks.
+Simply include the wrappy source file on your page. Wrappy has no dependencies on other libraries or frameworks.
 ```html
 <script src="wrappy.js"></script>
 ```
 ### Method on a Object as a Promise
-To make a method a Promise object, you need to call `wrappy.wrapMethod()`, with the object and method name:
+To make your method a Promise object, you need to call `wrappy.wrapMethod()`, with the object and method name:
 ```javascript
 // Make myObj.myMethod a Promise proxy that replaces myMethod() with a proxy
 wrappy.wrapMethod(myObj, 'myMethod');
 ```
-When invoking your method, wrappy will append a `Promise` object as the last argument that can either `resolve` or `reject`:
+When invoking your method, Wrappy will append a `Promise` object as the last argument, that can either `resolve` or `reject`:
 ```javascript
 // Your custom object
 var myObj = {
@@ -41,7 +41,7 @@ myObj.myMethod('David').then(function(result) {
 ```
 
 ### Function as a Promise
-To make a standalone function a Promise object, you need to call `wrappy.wrapFunction()`, with the function and assign the result from wrappy back to your original function:
+To make a standalone function a Promise object, you need to call `wrappy.wrapFunction()` with the function to wrap and assign the result back from Wrappy to your original function:
 ```javascript
 // Make myFunction a Promise proxy that replaces reassigns itself
 myFunction = wrappy.wrapFunction(myFunction);
