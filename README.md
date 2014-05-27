@@ -1,4 +1,4 @@
-# Wrappy
+# Wrappy.js
 
 Wrappy.js is a simple utility library that helps wraps your functions and methods in Promises. For those developers who often deal with Promises and Deferreds in a fluent interface, manually making a function or method return a promise quickly becomes tiresome and produces code bloat.
 
